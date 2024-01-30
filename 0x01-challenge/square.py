@@ -7,27 +7,26 @@ Square class
 class square():
     """ Documentation"""
 
-    def __init__(self, *args, **kwargs):
+    def __init__(self, size=0):
         """ Documentation """
-        for key, value in kwargs.items():
-            setattr(self, key, value)
+        self.size = size
 
     def area_of_my_square(self):
         """ Area of the square """
-        return self.width * self.width
+        return self.size ** 2
 
     def PermiterOfMySquare(self):
         """ Documentation """
-        return (self.width * 4)
+        return (self.size * 4)
 
     def __str__(self):
         """ Documentation """
-        return "{}/{}".format(self.width, self.height)
+        return "{}/{}".format(self.size, self.size)
 
 
 if __name__ == "__main__":
 
-    s = square(width=12, height=9)
+    s = square(size=12)
     print(s)
     print(s.area_of_my_square())
     print(s.PermiterOfMySquare())
